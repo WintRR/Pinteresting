@@ -1,28 +1,233 @@
 @import url(http://fonts.googleapis.com/css?family=Lato:400,700);
 
-$body-bg:                                                   #ecf0f1;
-$font-family-sans-serif:                'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$body-bg:                                                   red;
+$font-family-arial:                'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 $navbar-height:                                        45px;
 $navbar-default-bg:                          white;
-$navbar-default-brand-color:      #2980b9;
+$navbar-default-brand-color:      red;
 $brand-primary:                                    #2980b9;
 $jumbotron-bg:                                         white;
+$navbar-margin-bottom: 0px;
+$navbar-default-brand: 1px;
+$image-size-height: 40px;
 
-@import 'bootstrap';
+@import "bootstrap";
+
+
+/////////////////////  MASA LOGO
+.image-size {
+    max-width: 250px;
+    max-height: 100px;
+    margin-left: 20px;
+}
+
+
+.navbar-left{
+    margin-left: 10px;
+}
+
+/////////////////////////////////////////////////////////////// TOP BAR
+
+////////////// MASA TEXT ON TOP LEFT CORNER
+.top-row {
+    padding-top: 4px;
+    padding-left: 25px; 
+    padding-bottom: 32px;
+    padding-right: 15px;
+    color: #686868;
+    background-color: #F8F8F8 ;
+    height: 3px;
+    line-height: 30px;
+    border-bottom: 1px solid #E9E9E9;
+    font-size: 12px;    
+}
+
+///////////////////WHEN HOVERING OVER ICONS 
+.fa{
+    margin: 1px;
+}
+
+
+.icon-panels :hover {
+    color: white;
+    margin: 1px;
+    background-color: #3374C2;
+}
+
+////////////////////////
+.social{
+    margin-bottom: 8px;
+    border-radius: 8px;
+    padding-top: 13px;
+    padding-right: 8px;
+    padding-bottom: 8px;
+    padding-left: 8px;
+    margin: 1px;
+    float: top;
+
+}
+
+
+////////////////////// JUMBOTRON
 
 .center {
-     text-align: center;
+    text-align: center;
 }
 
-.navbar-brand {
-     font-weight: bold;
-}
+
+/////////////////////
+
 
 .checkbox {
-		padding-left: 20px;
+    padding-left: 20px;
 }
 
 .table, th, td
-{
-border: 1px ;
+{   
+    border: 1px ;
+}
+
+.sidebar-nav {
+    padding: 9px 0;
+}
+
+/////////////////// POSITIONING OF MENU
+
+.nav.nav-pills {
+    font-weight: bold;
+    font-color: #2980b9;
+    margin-top: 30px;
+    margin-right: 63px;
+}
+
+
+//////////////////// WHEN MENU IS HOVERED OVER 
+.nav.nav-pills a:hover {
+    color: white;  
+    background-color: #3374C2;
+}
+
+
+
+.nav a:link, { 
+    border-radius: 1;
+ }
+
+.dropdown-menu .sub-menu {
+    left: 100%;
+    position: absolute;
+    top: 0;
+    visibility: hidden;
+    margin-top: 2px;
+}
+
+
+.dropdown-menu li:hover .sub-menu {
+    visibility: visible;
+    color: blue;
+}
+
+////////////// MAKES MENU AUTO DROP DOWN 
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+
+//////////////// CAROUSEL DIVIDER
+
+.carousel-divider {
+    padding-top: 80px;
+    padding-left: 25px; 
+    padding-bottom: 500px;
+    padding-right: 15px;
+    color: #686868;
+    background-color: #F8F8F8 ;
+    height: 3px;
+    line-height: 30px;
+    border-bottom: 1px solid #E9E9E9;
+    font-size: 12px;    
+}
+
+.image-1{
+    padding-left: 160px;
+      max-width: 1000px;
+    max-height: 297px;
+   
+}
+
+@import url(http://fonts.googleapis.com/css?family=Merriweather);
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Merriweather', serif;
+  padding: 20px;
+}
+
+a {
+  color: #f06d06;
+  text-decoration: none;
+}
+
+.btn-group{
+        margin-left: 90px;
+}
+
+.box {
+
+    padding: 2em;
+    border: 8px solid #ccc;
+    display: block;
+    width: 50%;
+    height: 200px;
+    float: left;
+    margin: -1px 0 0 -1px;
+    color: black;
+    background: linear-gradient(white, white 50%, #333 50%, #333);
+    background-size: 100% 202%;
+    transition: all 0.2s ease;
+    animation: down-bump 0.4s ease;
+}
+
+.h2 {
+    margin: 100px;
+}
+
+.box h2 {
+    font-weight: 400;
+    letter-spacing: -1.5px;
+    line-height: 1.2;
+}
+.box h3 {
+    font: 0.8em "Lucida Grande", serif;
+}
+
+.box:hover {
+    background: #2980b9;
+
+    background-position: 100% 100%;
+    animation: up-bump 0.4s ease;
+}
+.box:hover h2 {
+    color: #48ad26;
+}
+.box:hover h2 span {
+    color: white;
+
+}
+.box:hover h3 {
+    color: #999;
+}
+
+@keyframes up-bump {
+  0% { padding-top: 2em; }
+  50% { padding-top: 1.5em; }
+  100% { padding-top: 2em; }
+}
+@keyframes down-bump {
+  0% { padding-top: 2em; }
+  50% { padding-top: 2.5em; }
+  100% { padding-top: 2em; }
 }

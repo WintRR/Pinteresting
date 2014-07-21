@@ -1,33 +1,82 @@
 <nav class="navbar navbar-static-top navbar-default" role="navigation">
   <div class="container">
-  <!-- Brand and toggle get grouped for better mobile display -->
-  <div class="navbar-header">
-    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
-      <span class="sr-only">Toggle navigation</span>
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-    </button>
-    <%= link_to "Test Application 1", root_path, class: "navbar-brand" %>
-  </div>
+    
 
-  <!-- Collect the nav links, forms, and other content for toggling -->
-  <div class="collapse navbar-collapse navbar-ex1-collapse">
-    <ul class="nav navbar-nav navbar-right">
-      <li><%= link_to "Home", root_path %></li>
-      <li><%= link_to "About", about_path %></li> 
-      <li><%= link_to 'New Pin', new_pin_path %></li>
-      <li><%= link_to "Sponsors", sponsors_path %></li> 
-      <li><%= link_to "Events", events_path %></li> 
-      <li><%= link_to "Contact", contact_path %></li> 
-        <% if user_signed_in? %>
-          <li><% link_to 'New Pin', new_pin_path %></li>
-           <li><%= link_to "Account Settings", edit_user_registration_path %></li>
-           <li><%= link_to "Log out", destroy_user_session_path, method: :delete %></li>
-         <% else %>
-           <li><%= link_to "Sign in", new_user_session_path %></li>
-         <% end %>
-    </ul>
-    </div><!-- /.navbar-collapse -->
+  <!-- Brand and toggle get grouped for better mobile display -->
+        
+    <div class="top-row">
+        Monash Accounting Students' Association
+
+         <ul class="nav navbar-nav navbar-right">
+          <div class="icon-panels">
+                <a target="_blank" href="#" class='social'>
+                  <i class="fa fa-envelope fa-2x"></i></a>
+               <a target="_blank" href="#" class='social'>
+                  <i class="fa fa-linkedin fa-2x"></i></a>
+                <a target="_blank" href="#" class='social'>
+                  <i class="fa fa-facebook fa-2x"></i></a>
+                <a target="_blank" href="#" class='social'>
+                  <i class="fa fa-instagram fa-2x"></i></a>
+          </div>
+         </ul>
+      </div>  
+    </div>
+
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        
+          <ul class="navbar-left"> 
+            <button type="button" class="navbar-toggle" data-toggle="collapse"     data-target=".navbar-ex1-collapse">
+              <span class="sr-only">Toggle navigation</span>
+            </button>
+
+            <%= link_to root_path do %>
+              <img class="image-size" src="<%= asset_path( 'MASA logo.png' ) %>">
+            <% end %>
+          </ul>
+
+
+
+         <ul class="nav navbar-nav navbar-right"> 
+              <ul class="nav nav-pills">
+
+              <!---About Us-->
+              <li class="dropdown">
+              <a href="http://google.com"  data-toggle="dropdown" class="abc">ABOUT US <b class="caret"></b></a>
+                <ul class="dropdown-menu" id="menu1">
+                    <li><%=  link_to "Aims and Objective", about_path %></li> 
+                    <li><%= link_to "MASA Committee", about_path %></li> 
+                    <li><%= link_to "MASA Alumni", about_path %></li>                     
+                    <li><%= link_to "Joining the Committee", about_path %></li> 
+                </ul>
+              <li class="dropdown">
+              <a href="#" data-toggle="dropdown" class="dropdown-toggle">SPONSORS <b class="caret"></b></a>
+                <ul class="dropdown-menu" id="menu1">
+                   <li><%= link_to "Corporate Sponsors", sponsors_path %></li> 
+                   <li><%=  link_to "Non-Corporate Sponsors", about_path %></li> 
+                </ul>
+              <li class="dropdown">
+              <a href="#" data-toggle="dropdown" class="dropdown-toggle">EVENTS <b class="caret"></b></a>
+                <ul class="dropdown-menu" id="menu1">
+                    <li><%= link_to "Past Events", about_path %></li> 
+                </ul>
+              <li class="dropdown">
+              <a href="#" data-toggle="dropdown" class="dropdown-toggle">CONTACT <b class="caret"></b></a>
+                 <ul class="dropdown-menu" id="menu1">
+                    <li><%= link_to "Past Events", about_path %></li> 
+                </ul>
+
+              </div>
+
+
+ 
+
+
+
+
+
+
+    <!-- /.navbar-collapse -->
     </div><!-- /.container --> 
 </nav>
+
